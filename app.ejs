@@ -1,0 +1,46 @@
+<html>
+
+<head>
+    <title>Realtime Editor/Collaboration</title>
+    <script>
+        var ROOM_ID = "<%= roomId %>"
+    </script>
+    <script src="/peer.js"></script>
+    <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+    <div class="main">
+        <div class="left-section">
+            <select id="lang">
+                <option id="null" value="" selected>select lang.</option>
+                <option id="c" value="4">C</option>
+                <option id="cpp14" value="2">C++</option>
+                <option id="java" value="3">Java JDK 14</option>
+                <option id="python3" value="3">Python 3</option>
+            </select>
+            <textarea class="editor" placeholder="please write your code"></textarea>
+            <textarea class="output" placeholder="output" disabled></textarea>
+            <div class="code-control">
+                <button id="run_code">Run Code</button>
+                <img id="loading" src="/loading.gif" hidden />
+            </div>
+        </div>
+        <div class="right-section">
+            <div class="video-section">
+                <video class="my_vid" poster="/dp.jpeg" muted></video>
+                <video class="incomming_vid" poster="/dp.jpeg"></video>
+            </div>
+            <div class="controls">
+                <button title="mute/unmute" id="audio-off"><img src="/icons/mic_on.png" alt="mic-on" /></button>
+                <button title="leave call" id="leave"><img src="/icons/call_end.png" alt="call-end" /></button>
+                <button title="camera on/off" id="video-off"><img src="/icons/videocam_on.png" alt="vid-on" /></button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/app.js"></script>
+</body>
+
+</html>

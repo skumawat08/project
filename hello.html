@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome</title>
+    
+    <style>
+        body {
+            background-color: #fafafa;
+        }
+        
+        #home {
+            background-color: #ffffff;
+            border: 1px solid #dbdbdb;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-left: 30%;
+            margin-right: 30%;
+            margin-top: 10%;
+            height: 55vh
+        }
+        
+        #control {
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+        }
+        
+        #roomId_input {
+            margin-top: 7px;
+            height: 30px;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background-color: #fafafa;
+        }
+        
+        #join_btn, #create_btn {
+            margin-top: 12px;
+            font-weight: bold;
+            color: white;
+            background-color: #0095f6;
+            border: 1px solid #0095f6;
+            border-radius: 3px;
+            height: 25px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    
+    <div id="home">
+        <h1 id="heading">Coditor</h1>
+        <div id="control">
+            <button id="create_btn">Create a room</button><br><br>
+            <hr/>
+            <input type="text" id="roomId_input" placeholder="enter room id">
+            <button id="join_btn">Join a room</button>
+        </div>
+    </div>
+    
+    <script>
+        let createButton = document.getElementById("create_btn");
+        let joinButton = document.getElementById("join_btn");
+        let roomId_input = document.getElementById("roomId_input");
+
+        let roomId = 'id' + (new Date()).getTime();
+
+        createButton.onclick = () => { window.location = `${window.location.href}join/${roomId}` };
+        joinButton.onclick = () => { window.location = `${window.location.href}join/${roomId_input.value}` };
+    </script>
+</body>
+
+</html>

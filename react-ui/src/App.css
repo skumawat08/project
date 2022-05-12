@@ -1,0 +1,111 @@
+html {
+  overflow: hidden;
+}
+
+body {
+  margin: 0px;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+}
+
+/* left section */
+.left-top {
+  display: flex;
+  justify-content: space-between;
+}
+
+.left-section {
+  flex: 2;
+  /*border: 1px solid black;*/
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 2.5px;
+}
+
+#lang {
+  float: left;
+  width: 100px;
+  height: 30px;
+}
+
+#run_code {
+  float: left;
+  width: 100px;
+  height: 30px;
+}
+
+#loading {
+  width: 30px;
+  height: 28px;
+}
+
+.editor {
+  flex: 3;
+  border-radius: 5px;
+}
+
+.output {
+  flex: 1;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.output, .editor, #langs {
+  margin: 2px;
+}
+
+/* --------------- */
+
+/*---right section---*/
+
+.right-section {
+  flex: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 2.5px;
+}
+
+.video-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-direction: column;
+  flex: 1;
+}
+
+.my_vid, .incomming_vid {
+  flex: 1;
+  width: 19vw;
+  height: 19vw;
+  border: 1px solid blueviolet;
+  margin: 2%;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 0.8px;
+  margin-bottom: 0.8px;
+  width: 50%;
+}
+
+#leave {
+  background-color: red;
+}
+
+#audio-off, #video-off, #leave {
+  border-radius: 5px;
+}
+
+.controls, .video-section {
+  margin: 2px;
+}
+
+/* ----------------- */
